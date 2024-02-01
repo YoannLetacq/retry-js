@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+    box-sizing: border-box;
+}
+
+body {
+    color: black;
+    font-family: sans-serif;
+    padding: 270px 0 80px 0;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+ul {
+    text-align: right;
+    list-style-type: none;
+}
+
+li {
+    cursor: pointer; 
+    margin-left: 15px;
+}
+
+a { 
+    color: black;
+    text-decoration: none;
+}
+
+nav {
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    position: fixed;
+    font-size: 50px;
+    padding: 30px 40px;
+    justify-content: space-between;
+    background: white;
+    box-shadow: 0px -10px 20px 0px black;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul a {
+    padding-bottom: 10px;
+}
+
+nav ul li:nth-child(1) a {
+    color: #6186ff;
+}
+
+nav ul li:nth-child(2) a {
+    color: #c7c7c7;
+}
+
+nav ul li:nth-child(3) a {
+    color: #baff75;
+}
+
+header {
+    width: fit-content;
+    height: 58px;
+    padding: 20px 0;
+    margin: 0 auto; /* Centered */
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+section {
+    box-sizing: border-box; 
+    width: 100%;
+}
+
+.padding{
+    padding: 20px;
+}
+
+
+h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+h2 {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+input, button {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 0;
+    font-family: sans-serif;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+button {
+    cursor: pointer;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: rgba(50, 50, 50);
+    background-color: transparent;
+}
+
+footer {
+    display: flex;
+    padding: 30px 0;
+    line-height: 25px;
+    border-top: 1px solid grey;
+    margin: 120px 100px 0 100px;
+    justify-content: space-between;
+}
+
+footer ul {
+    display: flex;
+    align-self: flex-end;
+    flex-direction: column;
+    text-decoration: underline;
+}
+
+#modal-wrapper{
+    display: inline-flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.section-fx {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.section-1, .section-2, .section-3, .section-4 {
+    width: 100%;
+}
+
+.section-2, .section-3 {
+    flex-direction: column;
+}
+
+.section-3 {
+    background-color: #baff75;
+}
+
+h3 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+#section-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+#section-block1{
+    flex: 1;
+    padding: 20%;
+    background-color: lightgrey;
+    height: 100%;
+}
+
+#section-block2 {
+    padding: 20%;
+    height: 100%;
+}
+
+
+#dark-h3 {
+    color: black;    
+}
+
+#contact-input {
+    height: 50px;
+    resize: none;
+}
+
+#fx-img-content {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#fx-img-content > div {
+    flex: 1;
+    transition: transform .5s;
+}
+
+#nav ul li a.active {
+    color: #ff0000; 
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.active-img {
+    transform: scale(1.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.circle {
+    z-index: 10;
+    border: 2px solid black;
+    border-radius: 50%;
+    box-shadow: 0 0 10px black;
+    pointer-events: none;
+    position: fixed;
+    top: -10rem;
+    left: -10rem;
+    height: 2rem;
+    width: 2rem;
+    transition: transform 0.4s, background 0.4s;
+}
+
+.big {
+    background: white;
+    transform: scale(2);
+    z-index: 10;
+}
+
+
+.skill-card {
+    padding: 20px;
+    width: 15em;
+    background-color: #FFF;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    cursor: pointer;
+}
+
+.skill-card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+}
+
+.skill-card:hover .skill-card__header {
+    height: 40px;
+}
+
+.skill-card:hover .skill-card__icon {
+    transform: translateX(-50%) translateY(-50%) scale(3);
+}
+
+.skill-card:hover .skill-card__body {
+    height: 170px;
+}
+
+.skill-card:hover .skill-card__knowledge li {
+    transform: translateX(0);
+    transition-timing-function: cubic-bezier(0, 1.5, 1, 1);
+    transition-duration: .5s;
+}
+
+.skill-card__header {
+    position: relative;
+    background-color: #E95A28; /* Adjusted color */
+    height: 170px;
+    margin: -20px -20px 20px -20px;
+    transition: height .5s;
+    overflow: hidden;
+}
+
+.skill-card__icon {
+    display: block;
+    transition: transform .5s;
+}
+
+.skill-card__body {
+    height: 40px;
+    transition: height .5s;
+    overflow: hidden;
+}
+
+.skill-card__title {
+    font-size: 1.4em;
+    font-weight: 600;
+    width: 128px;
+    color: black;
+    text-transform: uppercase;
+}
+
+.skill-card__duration {
+    color: #9E9E9E;
+    font-style: italic;
+}
+
+.skill-card__knowledge {
+    color: #424242;
+}
+
+.skill-card__knowledge li {
+    margin-top: 5px;
+    transition-duration: 0;
+    transition-delay: .5s;
+    transform: translateX(-100%);
+}
+
+.modal-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#close-modal {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+@media (max-width: 768px) {
+    #section-wrapper {
+        flex-direction: column;
+    }
+}
+
